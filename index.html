@@ -14,6 +14,14 @@
     />
     <link
       rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
@@ -26,11 +34,51 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <footer class="footer">
-      <div class="container footersec">
-        <section class="footer-logo">
-          <a href="./index.html" class="footer-logo-first link">MIMINO</a>
+    <main>
+      <div>
+        <section>
+          <a href="./index.html">MIMIHO</a>
+          <p>Ресторанно-готельний комплекс</p>
+          <ul>
+            <li class="navigation-contacts">
+              <h3>Ресторан</h3>
+              <a href="tel:+11000111-11-11" class="contact-adress link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="navigation-contacts">
+              <h3>Готель</h3>
+              <a href="tel:+11000111-11-11" class="contact-adress link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="navigation-contacts">
+              <address>Україна, м. Полтава, вул. Маршала Бірюзова, 15</address>
+            </li>
+          </ul>
         </section>
+      </div>
+      <div id="map" style="width: 400px; height: 400px"></div>
+    </main>
+    <footer class="footer">
+      <!-- <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/unsplash_2LzqR50_NTw.jpg" alt="add" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/unsplash_HT7mTAjNxR0.jpg" alt="adde" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/unsplash_QJMKyrud5l8.jpg" alt="addr" />
+          </div>
+        </div>
+        <button type="button swiper-button-next">вперед</button>
+        <button type="buttom swiper-button-prev">назад</button>
+      </div> -->
+      <div class="container footersec">
+        <a href="./index.html" class="footer-logo-first link">MIMINO</a>
+
         <div class="footersec-all">
           <ul class="footersec-list list">
             <li class="footersec-item">
@@ -75,5 +123,154 @@
         </div>
       </div>
     </footer>
+    <!-- <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Бронювання</h2>
+        <form>
+          <label for="name">Ім'я</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="date">Дата</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="time">Час</label>
+          <input type="time" id="time" name="time" required />
+
+          <label for="comments">Коментарі</label>
+          <textarea id="comments" name="comments"></textarea>
+
+          <input type="submit" value="Забронювати" />
+        </form>
+      </div>
+    </div> -->
+    <div class="bn-backdrop is-hidde" data-modal>
+      <div class="bn-modal-all">
+        <button type="button" class="bn-modal-close" data-modal-close>
+          <svg class="bn-modal-icon" width="24" height="24">
+            <use href="./images/symbol-defs.svg#icon-menu-close"></use>
+          </svg>
+          <svg class="bn-form-icon" width="24" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+
+        <form class="bn-form">
+          <p class="bn-form-text">ЗАБРОНЮВАТИ НОМЕР</p>
+          <div class="bn-form-field">
+            <input
+              class="bn-form-input"
+              type="text"
+              name="user-name"
+              id="name"
+              placeholder="Ваше ім’я"
+              required
+            />
+            <label for="name" class="bn-input-text"
+              >На кого забронювати номер?</label
+            >
+          </div>
+          <div class="bn-form-field">
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              class="bn-form-input"
+              placeholder="+38 (___) ___-__-__"
+            />
+            <label for="tel" class="bn-input-text">Номер телефону</label>
+          </div>
+          <div class="bn-form-field">
+            <div class="bn-form-relative">
+              <select name="nomer" id="nomer" class="bn-form-input">
+                <option value="one">Одномістний</option>
+                <option value="onelux">Одномістний люкс</option>
+                <option value="twolux">Двомісний люкс</option>
+              </select>
+              <svg class="bn-form-icon" width="24" height="24">
+                <use
+                  href="./images/symbol-defs.svg#icon-icon-arrowdown-for-modal"
+                ></use>
+              </svg>
+            </div>
+            <label for="nomer" class="bn-input-text">Категорія номеру</label>
+          </div>
+          <div class="bn-form-field">
+            <div class="bn-form-relative">
+              <span>
+                <input
+                  type="date"
+                  id="date"
+                  min="2020-01-01"
+                  max="2026-01-01"
+                  placeholder="Сьогодні"
+                  class="bn-form-input"
+                />
+                <svg class="bn-form-icon" width="24" height="24">
+                  <use
+                    href="./images/symbol-defs.svg#icon-icon-arrowdown-for-modal"
+                  ></use>
+                </svg>
+              </span>
+            </div>
+            <label for="date" class="bn-input-text">Дата заїзду</label>
+          </div>
+          <div class="bn-form-field">
+            <div class="bn-form-relative">
+              <input
+                type="date"
+                id="date"
+                min="2020-01-01"
+                max="2026-01-01"
+                placeholder="Сьогодні"
+                class="bn-form-input"
+              />
+              <svg class="bn-form-icon" width="24" height="24">
+                <use
+                  href="./images/symbol-defs.svg#icon-icon-arrowdown-for-modal"
+                ></use>
+              </svg>
+            </div>
+            <label for="latedate" class="bn-input-text">Дата виїзду</label>
+          </div>
+          <button type="submit" class="bn-form-buttom">
+            ОФОРМИТИ БРОНЮВАННЯ
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- <title>OpenStreetMap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"
+    />
+
+    <div id="map" style="width: 100%; height: 400px"></div>
+    <script>
+      var map = L.map("map").setView([49.5937, 34.5407], 10);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      }).addTo(map);
+      var marker = L.marker([49.5937, 34.5407]).addTo(map);
+    </script> -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var mySwiper = new Swiper(".swiper-container", {
+        slidesPerView: 2,
+        spaceBerween: 2,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script> -->
   </body>
 </html>
