@@ -154,95 +154,99 @@
       <div class="bn-modal-all">
         <button type="button" class="bn-modal-close" data-modal-close>
           <svg class="bn-modal-icon" width="24" height="24">
-            <use href="./images/symbol-defs.svg#icon-menu-close"></use>
-          </svg>
-          <svg class="bn-form-icon" width="24" height="40">
-            <use href="./images/symbol-defs.svg#icon-menu-close"></use>
+            <use href="./images/symbol-defs.svg#icon-arrow-left"></use>
           </svg>
         </button>
+        <div class="bn-form-pozition">
+          <form class="bn-form">
+            <p class="bn-form-text">ЗАБРОНЮВАТИ НОМЕР</p>
 
-        <form class="bn-form">
-          <p class="bn-form-text">ЗАБРОНЮВАТИ НОМЕР</p>
-          <div class="bn-form-field">
-            <input
-              class="bn-form-input"
-              type="text"
-              name="user-name"
-              id="name"
-              placeholder="Ваше ім’я"
-              required
-            />
-            <label for="name" class="bn-input-text"
-              >На кого забронювати номер?</label
-            >
-          </div>
-          <div class="bn-form-field">
-            <input
-              type="tel"
-              name="tel"
-              id="tel"
-              class="bn-form-input"
-              placeholder="+38 (___) ___-__-__"
-            />
-            <label for="tel" class="bn-input-text">Номер телефону</label>
-          </div>
-          <div class="bn-form-field">
-            <div class="bn-form-relative">
-              <select name="nomer" id="nomer" class="bn-form-input">
-                <option value="one">Одномістний</option>
-                <option value="onelux">Одномістний люкс</option>
-                <option value="twolux">Двомісний люкс</option>
-              </select>
-              <svg class="bn-form-icon" width="24" height="24">
-                <use
-                  href="./images/symbol-defs.svg#icon-icon-arrowdown-for-modal"
-                ></use>
-              </svg>
+            <div class="bn-form-field">
+              <input
+                class="bn-form-input"
+                type="text"
+                name="user-name"
+                id="name"
+                placeholder="Ваше ім’я"
+                required
+              />
+              <label for="name" class="bn-input-text"
+                >На кого забронювати номер?</label
+              >
             </div>
-            <label for="nomer" class="bn-input-text">Категорія номеру</label>
-          </div>
-          <div class="bn-form-field">
-            <div class="bn-form-relative">
-              <span>
-                <input
-                  type="date"
-                  id="date"
-                  min="2020-01-01"
-                  max="2026-01-01"
-                  placeholder="Сьогодні"
-                  class="bn-form-input"
-                />
+            <div class="bn-form-field">
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                class="bn-form-input"
+                placeholder="+38 (___) ___-__-__"
+                required
+              />
+              <label for="tel" class="bn-input-text">Номер телефону</label>
+            </div>
+            <div class="bn-form-field">
+              <div class="bn-form-relative">
+                <select name="nomer" id="nomer" class="bn-form-input">
+                  <option value="one">Одномістний</option>
+                  <option value="onelux">Одномістний люкс</option>
+                  <option value="twolux">Двомісний люкс</option>
+                </select>
                 <svg class="bn-form-icon" width="24" height="24">
                   <use
                     href="./images/symbol-defs.svg#icon-icon-arrowdown-for-modal"
                   ></use>
                 </svg>
-              </span>
+              </div>
+              <label for="nomer" class="bn-input-text">Категорія номеру</label>
             </div>
-            <label for="date" class="bn-input-text">Дата заїзду</label>
-          </div>
-          <div class="bn-form-field">
-            <div class="bn-form-relative">
-              <input
-                type="date"
-                id="date"
-                min="2020-01-01"
-                max="2026-01-01"
-                placeholder="Сьогодні"
-                class="bn-form-input"
-              />
-              <svg class="bn-form-icon" width="24" height="24">
-                <use
-                  href="./images/symbol-defs.svg#icon-icon-arrowdown-for-modal"
-                ></use>
-              </svg>
+            <div class="bn-form-field">
+              <div class="bn-form-relative">
+                <span>
+                  <input
+                    type="date"
+                    id="date"
+                    min="2020-01-01"
+                    max="2026-01-01"
+                    placeholder="Сьогодні"
+                    class="bn-form-input"
+                  />
+                  <svg class="bn-form-icon" width="24" height="24">
+                    <use
+                      href="./images/symbol-defs.svg#icon-icon-arrowdown-for-modal"
+                    ></use>
+                  </svg>
+                </span>
+              </div>
+              <label for="date" class="bn-input-text">Дата заїзду</label>
             </div>
-            <label for="latedate" class="bn-input-text">Дата виїзду</label>
-          </div>
-          <button type="submit" class="bn-form-buttom">
-            ОФОРМИТИ БРОНЮВАННЯ
-          </button>
-        </form>
+            <div class="bn-form-field">
+              <div class="bn-form-relative">
+                <input
+                  type="date"
+                  id="latedate"
+                  min="2020-01-01"
+                  max="2026-01-01"
+                  placeholder="Сьогодні"
+                  class="bn-form-input"
+                />
+                <label for="latedate" class="bn-input-text">Дата виїзду</label>
+                  <span class="bn-date">
+                    
+
+                    <svg class="bn-form-icon-1" width="25" height="25">
+                      <use
+                        href="./images/symbol-defs.svg#icon-icon-arrowdown-for-modal"
+                      ></use>
+                    </svg> </span
+                ></label>
+              </div>
+            </div>
+            <button type="submit" class="bn-form-buttom">
+              ОФОРМИТИ БРОНЮВАННЯ
+            </button>
+          </form>
+        </div>
       </div>
     </div>
     <!-- <title>OpenStreetMap Example</title>

@@ -275,23 +275,76 @@ ul {
         width: 24px;
         height: 24px;
         cursor: pointer;
-        
+       background-color: transparent;
         /* overflow: auto; */
-        fill: rgb(192, 28, 28);
+        fill: rgb(26, 21, 104);
         
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bn-modal-close:focus,
 .bn-modal-close:hover {
-    background-color: rgb(79, 19, 19);
-    fill: #0b075b;
+    
+    fill: #da1d60;
 }
 .bn-modal-icon {
+   
+}
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    position: relative;
+    outline: none;
+    padding: 5px;
+    padding-right: 40px;
+
+
+}
+.bn-form-icon-1 {
+    background-color: #FFFDEE;
+    position: absolute;
+        top: 18px;
+        right: 10px;
+        fill: #C79002;
+        
+}
+.bn-form-icon-1:hover,
+.bn-form-icon-1:focus +.bn-form-input:checked{
+    fill: #da1d60;
+}
+.bn-form-input:hover+.bn-input-text:hover{
+    fill: #6166bf;
+}
+/* span {
+    -moz-appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        
+        outline: none;
+        
+} */
+
+
+/* select:after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url("../images/symbol-defs.svg#icon-icon-arrowdown-for-modal");
+    position: absolute;
+    right: 5px;
+    top: 5px;
+} */
+.bn-form-pozition{
     
-    
+    display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%; */
 }
 .bn-modal-all {
-    /* display: flex; */
+    
 
     position: absolute;
     top: 50%;
@@ -310,7 +363,36 @@ ul {
 }
 .bn-modal-icon {}
 
+/* .input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type="date"]::before {
+    content: attr(placeholder);
+    color: #999;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    content: "";
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type="date"]::before {
+    content: attr(placeholder);
+    color: #999;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    content: "";
+} */
 .bn-form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -333,6 +415,7 @@ ul {
     justify-content: center;
     /* border: 1px solid #C79002; */
     width: 288px;
+    
     /* height: 64px; */
     display: flex;
     flex-direction: column;
