@@ -267,7 +267,7 @@ ul {
     position: absolute;
     top: 19px;
     right: 19px;
-    
+    border-style:none;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -277,8 +277,9 @@ ul {
         cursor: pointer;
        background-color: transparent;
         /* overflow: auto; */
-        fill: rgb(26, 21, 104);
-        
+        color: rgb(0, 0, 0);
+        border: none;
+        fill: #3e3a31;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bn-modal-close:focus,
@@ -288,6 +289,8 @@ ul {
 }
 .bn-modal-icon {
    
+        border: none;
+        fill: #3e3a31;
 }
 select {
     -moz-appearance: none;
@@ -315,91 +318,47 @@ select {
 .bn-form-input:hover+.bn-input-text:hover{
     fill: #6166bf;
 }
-/* span {
-    -moz-appearance: none;
-        -webkit-appearance: none;
-        border: none;
-        
-        outline: none;
-        
-} */
 
-
-/* select:after {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 25px;
-    background-image: url("../images/symbol-defs.svg#icon-icon-arrowdown-for-modal");
-    position: absolute;
-    right: 5px;
-    top: 5px;
-} */
 .bn-form-pozition{
+    /* padding: 60px; */
+    position: relative;
+    background-color: #FFFDEE;
+    max-height:638px;
+    opacity: 1;
+    /* overflow: auto; */
     
-    display: flex;
-        flex-direction: column;
-        /* justify-content: flex-start;
-        align-items: flex-start;
-        height: 100%; */
+        
 }
 .bn-modal-all {
-    
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    padding: 60px;
     max-width: 712px;
     height: 638px;
-        opacity: 1;
-        border: 1px solid #F3C653;
-        border-radius: 2px;
-        background: #FFFDEE;
-       
-        transition: transform 250ms linear;
-        overflow: auto;
+    background: #FFFDEE;
+    transition: transform 250ms linear;
+    overflow: auto;
 }
 .bn-modal-icon {}
 
-/* .input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-}
 
-input[type="date"]::before {
-    content: attr(placeholder);
-    color: #999;
-}
-
-input[type="date"]:focus::before,
-input[type="date"]:valid::before {
-    content: "";
-}
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-}
-
-input[type="date"]::before {
-    content: attr(placeholder);
-    color: #999;
-}
-
-input[type="date"]:focus::before,
-input[type="date"]:valid::before {
-    content: "";
-} */
 .bn-form {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    padding: 60px;
-}
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
 
+    width: 100%;
+    color: #0E0C07;
+   
+}
+.bn-form-in {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
 .bn-form-text {
     font-family: 'Times New Roman';
     font-style: normal;
@@ -412,14 +371,15 @@ input[type="date"]:valid::before {
 }
 
 .bn-form-field {
+    
     justify-content: center;
     /* border: 1px solid #C79002; */
     width: 288px;
     
     /* height: 64px; */
     display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
+    flex-direction:column;
+    /* margin-bottom: 30px; */
     
 }
 
@@ -438,6 +398,28 @@ input[type="date"]:valid::before {
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.bn-form-input:focus,
+.bn-form-input:hover+.bn-input-text{
+    color: rgb(72, 63, 41);
+    
+}
+.bn-first {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.bot {
+    justify-content: flex-end;
+}
+.bn-lux {
+    font-family: 'Times New Roman';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        color: #808080;
+}
 .bn-form-input::placeholder {
     font-family: 'Times New Roman';
     font-style: normal;
@@ -449,7 +431,7 @@ input[type="date"]:valid::before {
 }
 .bn-form-input:focus,
 .bn-form-input:hover {
-    border: 1px solid #6166bf;
+    border: 1px solid #3e3413;
     outline: none;
 }
 .bn-form-input:focus,
@@ -491,38 +473,31 @@ input[type="date"]:valid::before {
 } */
 .bn-form-icon {
     position: absolute;
-    top: 14px;
+    top: 16px;
     right: 18px;
     fill:#C79002;;
 }
 
 .bn-form-buttom {
     display: flex;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-    
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
     font-family: 'Montserrat';
-        font-weight: 500;
-        font-size: 24px ;
-
-        line-height: 1.2;
-    
-        cursor: pointer;
-        width: 592px;
-        height: 64px;
-    
-        background-color: black;
-        border: 1px solid #F3C653;
-            border-radius: 2px;
-        color: #FFFFFF;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    font-size: 24px ;
+    line-height: 1.2;
+    width: 100%;
+    height: 64px;
+    background-color: black;
+    border: solid #F3C653;
+    border-radius: 2px;
+    color: #FFFFFF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-buttom:hover,
-.form-buttom:focus {
+.bn-form-buttom:hover,
+.bn-form-buttom:focus {
     background: #F3C653;
-    
-        /* Akzent yellow */
-        border: 1px solid #F3C653;
-        border-radius: 25px;
+    border: 1px solid #F3C653;
+    color: black;
 }
