@@ -254,7 +254,7 @@ ul {
     visibility 250ms linear;
 }
 /*зникнення модального вікна*/
-.is-hidden {
+.bn-is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -268,31 +268,28 @@ ul {
     top: 19px;
     right: 19px;
     border-style:none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-       background-color: transparent;
-        /* overflow: auto; */
-        color: rgb(0, 0, 0);
-        border: none;
-        fill: #3e3a31;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    /* overflow: auto; */
+    color: rgb(0, 0, 0);
+    border: none;
+    fill: #3e3a31;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bn-modal-close:focus,
 .bn-modal-close:hover {
-    
-    fill: #da1d60;
+    fill: #927031;
 }
 .bn-modal-icon {
-   
-        border: none;
-        fill: #3e3a31;
+    border: none;
+    fill: #3e3a31;
 }
-select {
+/* select {
     -moz-appearance: none;
     -webkit-appearance: none;
     border: none;
@@ -300,60 +297,45 @@ select {
     outline: none;
     padding: 5px;
     padding-right: 40px;
-
-
-}
-.bn-form-icon-1 {
+} */
+/* .bn-form-icon-1 {
     background-color: #FFFDEE;
     position: absolute;
-        top: 18px;
-        right: 10px;
-        fill: #C79002;
+    top: 18px;
+    right: 10px;
+    fill: #C79002;
         
 }
 .bn-form-icon-1:hover,
 .bn-form-icon-1:focus +.bn-form-input:checked{
     fill: #da1d60;
-}
+} */
 .bn-form-input:hover+.bn-input-text:hover{
     fill: #6166bf;
 }
 
 .bn-form-pozition{
-    /* padding: 60px; */
     position: relative;
     background-color: #FFFDEE;
     max-height:638px;
     opacity: 1;
-    /* overflow: auto; */
-    
-        
+    /* overflow: auto; */     
 }
 .bn-modal-all {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 60px;
-    max-width: 712px;
+    padding: 15px;
+    /* max-width: 414px; */
+    width: 100%;
     height: 638px;
     background: #FFFDEE;
     transition: transform 250ms linear;
-    overflow: auto;
+    overflow:  auto;
 }
 .bn-modal-icon {}
 
-
-.bn-form {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    color: #0E0C07;
-   
-}
 .bn-form-in {
     display: flex;
     flex-direction: column;
@@ -363,35 +345,36 @@ select {
     font-family: 'Times New Roman';
     font-style: normal;
     font-weight: 700;
-    font-size:40px;
+    font-size:24px;
+    line-height: 1.2;
     letter-spacing: 0.05em;
     text-align: center;
     margin-bottom: 36px;
     color: black;
 }
-
+/* 
 .bn-form-field {
     
     justify-content: center;
-    /* border: 1px solid #C79002; */
+    
     width: 288px;
     
-    /* height: 64px; */
+    
     display: flex;
     flex-direction:column;
-    /* margin-bottom: 30px; */
+   
     
+} */
+.bn-form-field {
+    /* width: 100%; */
 }
-
 .bn-form-input {
     display: flex;
     justify-content: center;
-     width: 288px;
+    width: 100%;
     height: 64px;
     margin-bottom: 10px;
-   
     font-size: 24px;
-    
     border: 1px solid #C79002;
     background-color: transparent;
     padding-left: 12px;
@@ -401,13 +384,13 @@ select {
 .bn-form-input:focus,
 .bn-form-input:hover+.bn-input-text{
     color: rgb(72, 63, 41);
-    
 }
 .bn-first {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 16px;
 }
+
 .bot {
     justify-content: flex-end;
 }
@@ -440,7 +423,6 @@ select {
 }
 .bn-form-relative {
     position: relative;
-    width: inherit;
 }
 .bn-input-text {
     font-family: 'Montserrat';
@@ -451,7 +433,7 @@ select {
     letter-spacing: 0.02em;
     color: #C79002;
 }
-.visually-hidden {
+.bn-visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -485,7 +467,7 @@ select {
     justify-content: center;
     font-family: 'Montserrat';
     font-weight: 500;
-    font-size: 24px ;
+    font-size: 20px ;
     line-height: 1.2;
     width: 100%;
     height: 64px;
@@ -500,4 +482,40 @@ select {
     background: #F3C653;
     border: 1px solid #F3C653;
     color: black;
+}
+@media screen and (min-width:414px) {
+    /*modal bn form*/
+    .bn-modal-all {
+        padding: 15px;
+        width: 414px;
+        
+    }
+    .bn-first {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        /* align-items: center; */
+    }
+}
+@media screen and (min-width:1024px) {
+    .bn-first {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;    
+    }
+    .bn-modal-all {
+        padding: 60px;
+        width: 712px;
+
+    }
+    .bn-form-buttom {
+        font-size:24px;
+    }
+    .bn-form-input {
+        width: 288px;
+    }
+    .bn-form-text {
+        font-size: 40px;
+    }
 }
